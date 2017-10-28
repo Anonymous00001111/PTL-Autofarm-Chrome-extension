@@ -19,8 +19,9 @@ There is a random generator invoked, so that the script is not to obvious.
 This can take up to 10 mins, so dont worry if in that time nothing happens.
 To shut the script down, you need to remove the Plugin.
 You are able to normaly navigate through the site, there should be no interruptions.
-Bug reports can be made at the GIT-hub comment section.
-
+Bug reports can be made at the GIT-hub  issues section.
+If you are afraid of any maleware  or scam, theres no reason for that.
+The extension is open source and you have full controll over the code.
 
 I wish everyone great fun <3
 
