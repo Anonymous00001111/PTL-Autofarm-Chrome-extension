@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Pushits Farmer",
+    "description": "Farms Pushits for You",
+    "author": "Anonymous",
+    "version": "0.1",
+    "permissions": [
+        //"https://*/*",
+        //"http://*/*",
+        //"tabs",
+        //"background"
+        "*://*.ptl-clan.de/*",
+        "*://*.ptl-clan.de/de/afterpayday*"
+      ],
+    "content_scripts": [
+        {
+          "matches": ["https://ptl-clan.de/*",
+            "https://ptl-clan.de/de/afterpayday*"],
+          "js": ["inject.js"]
+        }
+    ],
+    "browser_action": {
+        "default_title": "Pushits Farmer"
+    }
+}
