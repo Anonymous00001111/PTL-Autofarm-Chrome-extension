@@ -16,7 +16,7 @@
         async function doStuff()
         {   
         try {
-            await sleep(Math.random() *500000);
+            await sleep(Math.random() *200000);
             console.log('Content script still loaded');
             var time = document.getElementById("countdown-payday").innerText;
             var a = parseInt(time);
