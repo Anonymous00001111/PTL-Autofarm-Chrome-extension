@@ -12,19 +12,8 @@
             return new Promise(resolve => setTimeout(resolve, ms));
           }
 
-          Element.prototype.remove = function() {
-            this.parentElement.removeChild(this);
-         }
-        NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-            for(var i = this.length - 1; i >= 0; i--) {
-                if(this[i] && this[i].parentElement) {
-                    this[i].parentElement.removeChild(this[i]);
-                }
-            }
-        }
-
         console.log('Content script loaded and started');
-        setInterval(doStuff, 5 * 60 * 1000)
+        setInterval(doStuff, 5 * 60 * 1000 )
         async function doStuff()
         {   
         try {
@@ -33,20 +22,28 @@
             var time = document.getElementById("countdown-payday").innerText;
             var a = parseInt(time);
             if (a <= 0) {
-                var node = document.querySelector('[title="Payday auszahlen"]');
-                if (node == null)
+                var  disp = document.getElementById('payday_payout').style.display;
+                if (disp == "")
                 {
-                    location.reload();
+                var x =document.getElementById("payday_payout")
+                var node = x.querySelector('[title="-> PayDay auszahlen"]');
+                node.click();
+                await sleep(Math.random() *2000);
                 }
-                else{
-                node.remove();
-                var id_real = document.querySelector('[title="-> Payday auszahlen"]');
-                id_real.click();
+                else
+                {
+                    location.reload();             
+                }
                 }
             }
-        }
         catch (e) {
             location.reload();  
+        }
+        var time = document.getElementById("countdown-payday").innerText;
+        var a = parseInt(time);
+        if (a <= 0)
+        {
+            location.reload(); 
         }
         }
 }())
