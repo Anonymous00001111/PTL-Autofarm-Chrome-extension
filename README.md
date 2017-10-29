@@ -1,8 +1,8 @@
-# PTL-Autofarm-Chrome-extension V2 is out
+# PTL-Autofarm-Chrome-extension V3 is out
 Let yourself farm Pushits automatically
 
-## We all waited for that moment, but now we can farm again.
-## Take a look a the Wiki section: "Changes of script". I will answer a lot of questions there.
+## We can farm again <3. 
+## This time, i build in a security check, so that our pushtis stay safe <3.
 
 To install look at the wiki section: "Install".
 I wish everyone great fun <3
