@@ -22,12 +22,21 @@
             var a = parseInt(time);
             if (a <= 0) {
                 var node = document.querySelector('[title="Payday auszahlen"]');
+                var id_pd =document.getElementById("payday_payout");
+                var  tag_a = id_pd.getElementsByTagName('a');
+                if (tag_a != null && tag_a.length > 0) {
+                    var setLink = id_pd.parentNode.getElementsByTagName('a');
+                    if (setLink != null && setLink.length > 0) {
+                        setLink[0].href = tag_a[0].href;
+                    }
+                }    
                 if (node == null)
                 {
                     location.reload();
                 }
-                node.click();
-                await sleep(Math.random() *10000);
+                else{
+                    window.location.href = setLink[0].href;
+                }
             }
         }
         catch (e) {
