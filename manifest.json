@@ -3,7 +3,7 @@
     "name": "Pushits Farmer",
     "description": "Farms Pushits for You",
     "author": "Anonymous",
-    "version": "0.2",
+    "version": "0.3",
     "permissions": [
         //"https://*/*",
         //"http://*/*",
